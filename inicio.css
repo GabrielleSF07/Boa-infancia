@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.info{
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 10px 80px;
+}
+
+/*Espaço do header*/
+header{
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #34B5EB;
+}
+
+/*Posicionamento do menu*/
+header .info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Tamanho da logo*/
+header .logo img{
+    max-width: 120px;
+}
+
+/*Alinhamento do nome da empresa e suas configurações*/
+header .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: auto;
+
+    font-family: "Lilita One", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #30548a;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/*Organização de itens da lista*/
+header .menu nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+}
+
+/*Definição da fonte da lista*/
+header .menu nav ul li a{
+    color: #ffffff;
+    font-family: "SN Pro", sans-serif;
+    font-size: 25px;
+    position: relative;
+}
+
+/*Efeito quando passa o mouse*/
+.menu nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.menu nav a:hover::after{
+    width: 100%;
+}
+
+/*Tamanho do carrossel de imagens*/
+main .carrossel {
+    width: 100%;
+    height: 810px;
+    overflow: hidden;
+    position: relative; 
+    margin-top: 120px;
+} 
+
+/*Sombra no início da imagem*/
+.carrossel::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.3) 10%,
+        rgba(0, 0, 0, 0) 20%
+    );
+
+    z-index: 1;
+}
+
+/*Configurações dos slides*/
+.slides{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideAnimation 15s infinite;
+}
+
+.slides:nth-child(1) { animation-delay: 0s; }
+.slides:nth-child(2) { animation-delay: 5s; }
+.slides:nth-child(3) { animation-delay: 10s; }
+
+.slides-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Animação*/
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/*Posição e estilo do texto*/
+.texto{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    max-width: 50%;
+
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px black;
+}
+
+/*Posição e estilo do título*/
+.texto h2{
+    font-family: "Lilita One", sans-serif;
+    max-width: 100%;
+
+    font-size: 85px;
+    text-shadow: 2px 2px 5px black;
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px #34B5EB;
+}
+
+
+
+/*Fundo da área de serviços*/
+.serviços{
+    background-image: url(piscina.png);
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center;
+
+    width: 100%;
+    padding: 300px 0;
+}
+
+/*Fundo azul*/
+.caixa-central{
+    background-color: #34B5EB;
+    width: 65%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/*Título*/
+.serviços h1{
+    display: flex;
+    justify-content: center;
+
+    font-size: 55px;
+    font-family: "Lilita One", sans-serif;
+    color: #ffffff;
+}
+
+/*Tamanho das imagens*/
+.serviços img{
+    padding-top: 10%;
+    padding-bottom: 5% ;
+    max-width: 80%;
+    transition: all 0.6s cubic-bezier(0.165 0.84 0.44 1);
+}
+
+/*Efeito de aumentar imagem quando passa o mouse*/
+.serviços img::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s cubic-bezier(0.165 0.84 0.44 1);
+    z-index: -1;
+}
+
+.serviços img:hover{
+    transition: all 0.5s;
+    transform: scale(1.20,1.20);
+}
+
+/*Ajuste do container*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    align-items: flex-start;
+    text-align: center;
+    gap: 40px;
+}
+
+/*Alinha os containers*/
+.info-servicos {
+    flex: 1;
+    text-align: center;
+}
+
+/*Título*/
+h2{
+    font-family: "SN Pro", sans-serif;
+    color: #ffffff;
+    height: 20%;
+    font-size: 40px;
+}
+
+/*Texto*/
+.serviços p{
+    text-align: center;
+    font-family: "SN Pro", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    max-width: 80%;
+    margin: 5px auto;
+}
+
+/*Efeito onda*/
+.serviços{
+    position: relative;
+}
+
+.onda{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-image: url(onda.png);
+    background-size: 1000px 100px;
+
+    animation: onda 3s ease-in-out infinite alternate;
+}
+
+@keyframes onda {
+    0%{
+        transform: translateY(0px);
+    }   
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+#onda1{
+    z-index: 999;
+    opacity: 1;
+    background-position-x: 400px;
+}
+
+#onda2{
+    z-index: 998;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+
+#onda3{
+    z-index: 997;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+
+#onda4{
+    z-index: 996;
+    opacity: 0.8;
+    background-position-x: 100px;
+}
+
+/*Título*/
+.depoimentos h1{
+    display: flex;
+    justify-content: center;
+    padding:50px 50px 20px 50px;
+
+    font-size: 65px;
+    font-family: "Lilita One", sans-serif; 
+    color: #34B5EB;
+}
+
+/*Nome*/
+.depoimentos h2{
+    font-size: 40px;
+}
+
+/*Alinhamento da foto e do nome*/
+.depoimentos .fotoNome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/*Texto*/
+.depoimentos p{
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+    
+    font-size: 20px;
+    font-family: "SN Pro", sans-serif;
+    color: white;
+}
+
+/*Tamanho da foto e borda*/
+.fotoCliente{
+    width: 180px;
+    border-radius: 95px;
+}
+
+/*Ajuste e tamanho da foto das estrelas*/
+.estrelas{
+    width: 250px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+/*Ajuste da area dos depoimentos*/
+.cliente{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: 50px 100px 50px 100px;
+    max-width: 55%;
+   
+    background-color:#34B5EB;
+    border-radius: 50px;
+}
+
+/*Ajustes footer*/
+.footer{
+    background-color: #30548a;
+    padding: 30px;
+}
+
+/*Ajustes da frase*/
+.frase{
+   font-family: "Lilita One", sans-serif; 
+   color: white;
+   font-size: 19px; 
+   padding: 0 90px 0 90px;
+}
+
+/*Ajustes dos títulos*/
+.informacoes h2{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+/*Ajustes texto*/
+.informacoes p{
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/*Ajuste dos links*/
+.informacoes a{
+    font-size: 45px;
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+/*Ajustes dos direitos autorais*/
+.informacoes h3{
+    display: flex;
+    justify-content: center;
+
+    font-family: "SN Pro", sans-serif, bold;
+    color: white;
+    font-size: 20px;
+}
+
+/*Posicionamento do footer*/
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 90px 20px 90px;
+    text-align: left;
+    gap: 50px;
+}
+
+
+
+
+
+
+
+
