@@ -163,8 +163,6 @@ main .carrossel {
     -webkit-text-stroke: 0.2px #34B5EB;
 }
 
-
-
 /*Fundo da área de serviços*/
 .serviços{
     background-image: url(piscina.png);
@@ -201,6 +199,7 @@ main .carrossel {
     padding-bottom: 5% ;
     max-width: 80%;
     transition: all 0.6s cubic-bezier(0.165 0.84 0.44 1);
+    transition: transform 0.5s linear;
 }
 
 /*Efeito de aumentar imagem quando passa o mouse*/
