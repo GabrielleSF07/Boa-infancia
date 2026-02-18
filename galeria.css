@@ -233,3 +233,120 @@ header .menu nav ul li a{
     background-color: #30548a;
     transform: scale(1.10);
 }
+
+/*Título*/
+.galeriaVideos h1{
+    margin-top: 200px;
+    text-align: center;
+
+    font-family: "Lilita One", sans-serif;
+    color: #30548a;
+    font-size: 65px;
+}
+
+/*Container com informações*/
+.container{
+    padding-bottom: 30px;
+    margin: 25px 150px 50px 150px;
+
+    background-color: #34B5EB;
+    border-radius: 50px;
+}
+
+/*Ajustes do video*/
+.container video{
+    width: 800px;
+    margin: 20px;
+    border: 10px solid #ffffff;
+    box-shadow: 3px 3px 10px black;
+}
+
+/*Ajuste da area do video*/
+.videos{
+    padding: 20px 40px 0 40px;
+    display: flex;
+    justify-content: center;
+} 
+
+/*Ajuste do botão*/
+.botaoOrc{
+    display: flex;
+    justify-content: center;
+    margin: 150px 40px;
+}
+
+/*Àrea do botão*/
+.botaoOrcamento{
+    background-color: #1891c5;
+    padding: 15px 35px;
+
+    font-family: "SN Pro", sans-serif;
+    color: #ffffff;
+    font-size: 70px;
+
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px black;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/*Efeito do botão*/
+.botaoOrcamento:hover{
+    background-color: #28af06;
+    transform: scale(1.2);
+}
+
+/*Ajustes footer*/
+.footer{
+    background-color: #30548a;
+    padding: 30px;
+}
+
+/*Ajustes da frase*/
+.frase{
+   font-family: "Lilita One", sans-serif; 
+   color: white;
+   font-size: 19px; 
+   padding: 0 90px 0 90px;
+}
+
+/*Ajustes dos títulos*/
+.informacoes h2{
+    font-family: "SN Pro", sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+/*Ajustes texto*/
+.informacoes p{
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/*Ajuste dos links*/
+.informacoes a{
+    font-size: 45px;
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+/*Ajustes dos direitos autorais*/
+.informacoes h3{
+    display: flex;
+    justify-content: center;
+
+    font-family: "SN Pro", sans-serif, bold;
+    color: white;
+    font-size: 20px;
+}
+
+/*Posicionamento do footer*/
+footer .container-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 90px 20px 90px;
+    text-align: left;
+    gap: 50px;
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.info{
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 10px 80px;
+}
+
+/*Espaço do header*/
+header{
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #34B5EB;
+}
+
+/*Posicionamento do menu*/
+header .info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Tamanho da logo*/
+header .logo img{
+    max-width: 120px;
+}
+
+/*Alinhamento do nome da empresa e suas configurações*/
+header .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: auto;
+
+    font-family: "Lilita One", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #30548a;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/*Organização de itens da lista*/
+header .menu nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+}
+
+/*Definição da fonte da lista*/
+header .menu nav ul li a{
+    color: #ffffff;
+    font-family: "SN Pro", sans-serif;
+    font-size: 25px;
+    position: relative;
+}
+
+/*Efeito quando passa o mouse*/
+.menu nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.menu nav a:hover::after{
+    width: 100%;
+}
+
+/*Título*/
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+
+    font-family: "Lilita One", sans-serif;
+    color:#30548a;
+    font-size: 40px;
+}
+
+/*Ajuste dos vídeos*/
+.videos video{
+    width: 800px;
+    margin-top: 80px;
+    padding: 10px;
+
+    border: 1px solid #ffffff;
+    box-shadow: 3px 3px 10px black;
+}
+
+/*Area dos videos*/
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 200px;
+    column-gap: 80px;
+}
+
+/*Ajustes footer*/
+.footer{
+    background-color: #30548a;
+    padding: 30px;
+}
+
+/*Ajustes da frase*/
+.frase{
+   font-family: "Lilita One", sans-serif; 
+   color: white;
+   font-size: 19px; 
+   padding: 0 90px 0 90px;
+}
+
+/*Ajustes dos títulos*/
+.informacoes h2{
+    font-family: "SN Pro", sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+/*Ajustes texto*/
+.informacoes p{
+    font-family: "SN Pro", sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/*Ajuste dos links*/
+.informacoes a{
+    font-size: 45px;
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+/*Ajustes dos direitos autorais*/
+.informacoes h3{
+    display: flex;
+    justify-content: center;
+
+    font-family: "SN Pro", sans-serif, bold;
+    color: white;
+    font-size: 20px;
+}
+
+/*Posicionamento do footer*/
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 90px 20px 90px;
+    text-align: left;
+    gap: 50px;
+}
